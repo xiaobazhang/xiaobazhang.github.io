@@ -1,7 +1,7 @@
 permalink: /:year/:month/:day/:title.html
 paginate: 10
 #markdown: redcarpet
-#markdown: kramdown
+markdown: kramdown
 #kramdown:
 #  input:  GFM
 # use_coderay: true
