@@ -4,15 +4,18 @@
 
 * ElasticSearch[官网](www.elastic.co/downloads) 下载最新版本的代码，最新5.x版本要求java版本1.8以上请注意。
 * 解压源码包
-  
+ 
   		tar -xvf elasticsearch-5.4.3.tar.gz 
   		cd elasticsearch-5.4.3
+  		
 * 单节点运行
 		
 		./bin/elasticsearch
+		
 	此时单节点已经运行起来了，浏览器输入以下命令：
 		
-		http://10.13.132.205:9200	
+		http://10.13.132.205:9200
+		
 	如果正常则返回结果格式如下：
 		
 		{
@@ -28,6 +31,7 @@
 	    	},
 		    "tagline": "You Know, for Search"
 		}
+		
 * 有可能碰到的错误
 	
 	错误1
@@ -40,9 +44,11 @@
 	这个错误是由于操作系统的vm.max_map_count设置太小导致的，解决如下
 	
 		sudo sysctl -w vm.max_map_count=655360
+		
 	错误2：
 	
 		max file descriptors [4096] for elasticsearch process likely too low, increase to at least [65536]
+		
 	这个错误是操作系统的最大文件打开数限制，解决如下：
 	
 		sudo vim /etc/security/limits.conf
@@ -101,7 +107,7 @@
  		
  		正常回复节点状态如下：
  			
- 			{
+			{
 			    "cluster_name": "suli-elasticsearch",
 			    "status": "green",
 			    "timed_out": false,
@@ -118,7 +124,8 @@
 			    "task_max_waiting_in_queue_millis": 0,
 			    "active_shards_percent_as_number": 100
 			}
- 		可以看到当集群有三个节点，至此集群的简单部署已经完成了。
+			
+ 	可以看到当集群有三个节点，至此集群的简单部署已经完成了。
 	
 	
 		
