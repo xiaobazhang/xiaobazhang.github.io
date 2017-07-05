@@ -1,3 +1,12 @@
+---
+layout: post
+title: ElasticSearch（一）集群安装
+category: 技术
+tags: ElasticSearch
+keywords: 
+description: 
+---
+
 ## ElasticSearch（一）集群安装
 
 ### 1. 下载和运行
