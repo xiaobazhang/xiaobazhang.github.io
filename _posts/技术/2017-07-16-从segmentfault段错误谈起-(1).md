@@ -28,7 +28,7 @@ description:
 
 X86-64下linux进程的地址结构如下图所示：
 
-![image](/public/img/tech/stack1.png) 
+![image](/public/img/tech/stack1.jpg) 
 ![image](/public/img/tech/stack.png)
 
 左边的图很详细介绍了进程地址空间的具体排列。右边的图是用户空间详细的地址分配细节。
