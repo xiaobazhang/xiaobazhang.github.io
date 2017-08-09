@@ -1,6 +1,8 @@
 permalink: /:year/:month/:day/:title.html
 paginate: 10
 markdown: redcarpet
+redcarpet:
+    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
 #markdown: kramdown
 #kramdown:
 #  input:  GFM
@@ -9,7 +11,7 @@ markdown: redcarpet
 # 作者信息
 author: 
   name: xiaobazhang
-  email: mrchenxin@foxmail.com
+  email: xiaobazhang1111@gmail.com
   link: http://xiaobazhang.github.io
   weibo: http://weibo.com/CMusk
   github: http://github.com/xiaobazhang
@@ -17,7 +19,7 @@ author:
   linkedin: 
 
 # 站点信息
-title: 小巴掌的博客
+title: 小巴掌
 description: My personal blog
 url: http://xiaobazhang.github.io
 rss_url: /pages/atom.xml
