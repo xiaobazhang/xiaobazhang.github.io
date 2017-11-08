@@ -88,6 +88,12 @@ sub {
 }
 
 img {
+    max-width: 97.5%;
+    margin: 15px auto;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 60%;
     border: 0
 }
 
