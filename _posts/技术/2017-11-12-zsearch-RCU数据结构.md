@@ -1,6 +1,6 @@
 ---
 layout: post
-title: zsearch代码学习-rcu数据结构(一)
+title: zsearch代码学习-rcu数据结构
 category: 技术
 tags: 搜索引擎
 keywords: 
