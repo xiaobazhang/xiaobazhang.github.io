@@ -1,94 +1,125 @@
-permalink: /blog/:year/:month/:title.html 
-include: ['.htaccess']
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
-markdown: kramdown
-highlights: pygments
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
 url: http://xiaobazhang.github.io
-rss_url: /atom.xml
-lsi: false
-safe: true
+date_format: "ordinal"
+title: 小巴掌
+subtitle: "打怪升级"
+description: "苏黎的个人博客"
+keywords: 苏黎, 苏启, 小巴掌, suqi, suli, xiaobazhang
 timezone: Asia/Shanghai
-auto: false 
+encoding: "utf-8"
+side_bar_repo_limit: 5
 
-paginate: 8
-paginate_path: "page:num"
-
-kramdown:
-  auto_ids: true,
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-JB :
-  IMAGE_PATH : http://coolshell.info/images
-
-# presonal config
-domain: http://coolshell.info
-title: Suli-苏黎
-description: Draw my life with code
-author: Suli.cx
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: 陈鑫
+organization: 163.com
+organization_url: www.163.com
+github_username: xiaobazhang
+location: HangZhou, China
 email: xiaobazhang1111@gmail.com
-github: xiaobazhang
 
-# gavatar头像及Favicon
-gavatar: /images/deer3.png
-favicon: /images/deer3.png
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: 首页
 
-config:
-  js_dir:
-  img_dir:
-  css_dir:
+  -
+    href: /categories/
+    label: 分类
 
+#   -
+#     href: /archives/
+#     label: 归档
 
+  -
+    href: /wiki/
+    label: 维基
 
-# permalink: /:year/:month/:day/:title.html
-# paginate: 10
-# markdown: redcarpet
-#redcarpet:
-#    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
+  -
+    href: /links/
+    label: 链接
 
+  -
+    href: /about/
+    label: 关于
 
-# 作者信息
-#author:
-#  name: xiaobazhang
-#  email: xiaobazhang1111@gmail.com
-#  link: http://xiaobazhang.github.io
-#  weibo: http://weibo.com/CMusk
-#  github: http://github.com/xiaobazhang
-#  music: http://site.douban.com/linanya
-#  linkedin:
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
 
-# 站点信息
-#title: 小巴掌
-#description: My personal blog
-#url: http://xiaobazhang.github.io
-#rss_url: /pages/atom.xml
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
+paginate: 8
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
 
-# gavatar头像及Favicon
-#gavatar: /public/img/deer3.png
-#favicon: /public/img/deer3.png
+repository: xiaobazhang/xiaobazhang.github.io
 
-# google analytics 设置
-#ga:
-#  id: UA-54262064-1
-#  url: http://xiaobazhang.github.io
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username: 
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: mzlogin
+    repo: blog-comments
+    oauth:
+        client_id: d2e1cbbd298958076462
+        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: mzlogin
+    repo: blog-comments
+    clientID: d2e1cbbd298958076462
+    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
 
-# disqus 设置
-#disqus:
-#  shortname: xiaobazhang
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: false
+    # 最多显示多少条搜索结果
+    limit: 10
 
-# 主题设置，自动激活某个标签
-#active: 读书
-
-# 首页除了最新文章外显示分类
-#cates:
-#  - Optimization
-#  - LaTeX
-
-# 中文本地化
-#locals:
-#  tags: 标签
-#  about: 关于
-#  newest: 最新文章
-#  archive: 归档
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+google:
+    analytics_id: UA-80669434-1

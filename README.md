@@ -1,47 +1,82 @@
-### 博客地址
+# 码志
 
-Github托管的是以前Jekyll版本的源码，现在博客用Hexo重新搭建
-#### 预览
+我的个人博客：<https://mazhuang.org>，欢迎 Star 和 Fork。
 
-* Jekyll版本：EZLippi.github.io
-* Hexo 版本： [www.ezlippi.com](http://www.ezlippi.com)
-* Hexo版本源码：[https://coding.net/u/ezlippi/p/ezlippi/git/tree/coding-pages/](https://coding.net/u/ezlippi/p/ezlippi/git/tree/coding-pages/)
+## 概览
 
-### 使用Jekyll版本作为博客模板，仅需如下几步：
+<!-- vim-markdown-toc GFM -->
 
-1. 首先Fork或Download一份本项目代码。 
-2. 修改_config.yaml及about.md文件，以变更个人信息。 
-3. 修改_include目录下相关文件，以配置网站统计(analytics.html)，网友评论(comment.html)，右侧栏目(categories.html),热门文章(hot.html),友情链接(links.html)等。 
-4. 修改CNAME文件，以绑定自己的域名。 
-5. 删除_posts下文章，换成你自己的。 
-6. 去谷歌自定义搜索新建一个你的搜索引擎，把你的Id替换根目录下search.html我的ID
-7. 最后，push到你自己的博客Repo~ 
+* [效果预览](#效果预览)
+* [Fork 指南](#fork-指南)
+* [贴心提示](#贴心提示)
+* [经验与思考](#经验与思考)
+* [致谢](#致谢)
 
- *^_^*如果愿意，Star本项目一个吧~ 
+<!-- vim-markdown-toc -->
 
-### 本项目使用了
+## 效果预览
 
-1. CNZZ的网站统计服务，官网：http://cnzz.com 
-2. 多说的评论功能，官网:http://duoshuo.com/
+**[在线预览 &rarr;](https://mazhuang.org)**
 
-### 联系方式
+![screenshot home](https://mazhuang.org/assets/images/screenshots/home.png)
 
-联系方式： Email(ouyanglip@gmail.com) 
+## Fork 指南
 
+Fork 本项目之后，还需要做一些事情才能让你的页面「正确」跑起来。
 
-### 使用本项目作模板的博客链接
+1. 正确设置项目名称与分支。
 
-* http://www.94geek.com  
-* http://www.haidaoxiaofei.me  
-* http://www.malphi.net  
-* http://happyaround.com  
-* http://tencentlocation.github.io  
-* http://wtaps.github.io 
-* http://maoshu.cc
-* http://x-carto.com/
-* http://flypeom.site
+   按照 GitHub Pages 的规定，名称为 `username.github.io` 的项目的 master 分支，或者其它名称的项目的 gh-pages 分支可以自动生成 GitHub Pages 页面。
 
-## 2016-02-25更新
+2. 修改域名。
 
-* 本博客由Jekyl迁移到Hexo,博客地址[ezlippi](www.ezlippi.com),源码托管在了国内的[Coding.net](https://coding.net/u/ezlippi/p/ezlippi/git/tree/coding-pages/)
-* 使用Hexo搭建个人博客具体教程参考[Jekyll迁移到Hexo建立个人博客](http://www.ezlippi.com/blog/2016/02/jekyll-to-hexo.html)
+   如果你需要绑定自己的域名，那么修改 CNAME 文件的内容；如果不需要绑定自己的域名，那么删掉 CNAME 文件。
+
+3. 修改配置。
+
+   网站的配置基本都集中在 \_config.yml 文件中，将其中与个人信息相关的部分替换成你自己的，比如网站的 url、title、subtitle 和第三方评论模块的配置等。
+
+   **评论模块：** 目前支持 disqus、gitment 和 gitalk，选用其中一种就可以了，推荐使用 gitalk。它们各自的配置指南链接在 \_config.yml 文件的 Comments 一节里都贴出来了。
+
+   **注意：** 如果使用 disqus，因为 disqus 处理用户名与域名白名单的策略存在缺陷，请一定将 disqus.username 修改成你自己的，否则请将该字段留空。我对该缺陷的记录见 [Issues#2][3]。
+
+4. 删除我的文章与图片。
+
+   如下文件夹中除了 template.md 文件外，都可以全部删除，然后添加你自己的内容。
+
+   * \_posts 文件夹中是我已发布的博客文章。
+   * \_drafts 文件夹中是我尚未发布的博客文章。
+   * \_wiki 文件夹中是我已发布的 wiki 页面。
+   * images 文件夹中是我的文章和页面里使用的图片。
+
+5. 修改「关于」页面。
+
+   pages/about.md 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 \_data 目录下的 skills.yml 和 social.yml 文件里的数据。
+
+## 贴心提示
+
+1. 排版建议遵照一定的规范，推荐 [中文文案排版指北（简体中文版）][1]。
+
+2. 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。
+
+## 经验与思考
+
+* 简约，尽量每个页面都不展示多余的内容。
+
+* 有时一图抵千言，有时可能只会拖慢网页加载速度。
+
+* 言之有物，不做无痛之呻吟。
+
+* 如果写技术文章，那先将技术原理完全理清了再开始写，一边摸索技术一边组织文章效率较低。
+
+* 杜绝难断句、难理解的长句子，如果不能将其拆分成几个简洁的短句，说明脑中的理解并不清晰。
+
+* 可以学习一下那些高质量的博主，他们的行文，内容组织方式，有什么值得借鉴的地方。
+
+## 致谢
+
+本博客外观基于 [DONGChuan](https://dongchuan.github.io) 修改，感谢！
+
+[1]: https://github.com/mzlogin/chinese-copywriting-guidelines
+[2]: https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/
+[3]: https://github.com/mzlogin/mzlogin.github.io/issues/2
