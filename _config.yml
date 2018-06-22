@@ -1,53 +1,37 @@
-permalink: /:year/:month/:day/:title.html
-paginate: 10
-markdown: redcarpet
-redcarpet:
-    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
-#markdown: kramdown
-#kramdown:
-#  input:  GFM
-# use_coderay: true
+permalink: /blog/:year/:month/:title.html 
+include: ['.htaccess']
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
+markdown: kramdown
+highlights: pygments
+url: 
+cdn_url: 7u2t01.com1.z0.glb.clouddn.com
+lsi: false
+safe: true
+timezone: Asia/Shanghai
+auto: false 
 
-# 作者信息
-author: 
-  name: xiaobazhang
-  email: xiaobazhang1111@gmail.com
-  link: http://xiaobazhang.github.io
-  weibo: http://weibo.com/CMusk
-  github: http://github.com/xiaobazhang
-  music: http://site.douban.com/linanya
-  linkedin: 
+paginate: 8
+paginate_path: "page:num"
 
-# 站点信息
-title: 小巴掌
-description: My personal blog
-url: http://xiaobazhang.github.io
-rss_url: /pages/atom.xml
+kramdown:
+  auto_ids: true,
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
 
-# gavatar头像及Favicon
-gavatar: /public/img/deer3.png
-favicon: /public/img/deer3.png
+JB :
+  IMAGE_PATH : http://coolshell.info/images
 
-# google analytics 设置
-ga:
-  id: UA-54262064-1 
-  url: http://xiaobazhang.github.io
+# presonal config
+domain: http://coolshell.info
+title: Suli-苏黎
+description: Draw my life with code
+author: Suli.cx
+email: xiaobazhang1111@gmail.com
+github: xiaobazhang
 
-# disqus 设置
-disqus:
-  shortname: xiaobazhang 
-
-# 主题设置，自动激活某个标签
-active: 读书
-
-# 首页除了最新文章外显示分类
-cates: 
-  - Optimization
-  - LaTeX
-
-# 中文本地化
-locals:
-  tags: 标签
-  about: 关于
-  newest: 最新文章
-  archive: 归档
+config:
+  js_dir:
+  img_dir:
+  css_dir:
