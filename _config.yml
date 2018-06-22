@@ -3,8 +3,8 @@ include: ['.htaccess']
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
 markdown: kramdown
 highlights: pygments
-url: 
-cdn_url: 7u2t01.com1.z0.glb.clouddn.com
+url: http://xiaobazhang.github.io
+rss_url: /atom.xml
 lsi: false
 safe: true
 timezone: Asia/Shanghai
@@ -31,7 +31,64 @@ author: Suli.cx
 email: xiaobazhang1111@gmail.com
 github: xiaobazhang
 
+# gavatar头像及Favicon
+gavatar: /images/deer3.png
+favicon: /images/deer3.png
+
 config:
   js_dir:
   img_dir:
   css_dir:
+
+
+
+# permalink: /:year/:month/:day/:title.html
+# paginate: 10
+# markdown: redcarpet
+#redcarpet:
+#    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
+
+
+# 作者信息
+#author:
+#  name: xiaobazhang
+#  email: xiaobazhang1111@gmail.com
+#  link: http://xiaobazhang.github.io
+#  weibo: http://weibo.com/CMusk
+#  github: http://github.com/xiaobazhang
+#  music: http://site.douban.com/linanya
+#  linkedin:
+
+# 站点信息
+#title: 小巴掌
+#description: My personal blog
+#url: http://xiaobazhang.github.io
+#rss_url: /pages/atom.xml
+
+# gavatar头像及Favicon
+#gavatar: /public/img/deer3.png
+#favicon: /public/img/deer3.png
+
+# google analytics 设置
+#ga:
+#  id: UA-54262064-1
+#  url: http://xiaobazhang.github.io
+
+# disqus 设置
+#disqus:
+#  shortname: xiaobazhang
+
+# 主题设置，自动激活某个标签
+#active: 读书
+
+# 首页除了最新文章外显示分类
+#cates:
+#  - Optimization
+#  - LaTeX
+
+# 中文本地化
+#locals:
+#  tags: 标签
+#  about: 关于
+#  newest: 最新文章
+#  archive: 归档
