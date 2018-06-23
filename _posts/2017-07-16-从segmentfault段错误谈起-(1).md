@@ -2,10 +2,12 @@
 layout: post
 title: 从segmentfault段错误谈起-(1)
 category: 技术
-tags: Linux
-keywords: 
-description: 
+tags: Linux C++ 内核
+date: 2017-07-16
 ---
+
+* content
+{:toc}
 
 # segmentfault谈起
 
