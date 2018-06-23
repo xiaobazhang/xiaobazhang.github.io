@@ -26,21 +26,21 @@ description:
 		http://10.13.132.205:9200 
 		
 	如果正常则返回结果格式如下：
-		
-		{
-    		"name": "node-1",
-    		"cluster_name": "suli-elasticsearch",
-    		"cluster_uuid": "qd7_-1qtTx-USrsyrH8gUQ",
-    		"version": {
-        	"number": "5.4.3",
-	        "build_hash": "eed30a8",
-	        "build_date": "2017-06-22T00:34:03.743Z",
-	        "build_snapshot": false,
-	        "lucene_version": "6.5.1"
-	    	},
-		    "tagline": "You Know, for Search"
-		}
-		
+```json
+{
+    "name": "node-1",
+    "cluster_name": "suli-elasticsearch",
+    "cluster_uuid": "qd7_-1qtTx-USrsyrH8gUQ",
+    "version": {
+    "number": "5.4.3",
+    "build_hash": "eed30a8",
+    "build_date": "2017-06-22T00:34:03.743Z",
+    "build_snapshot": false,
+    "lucene_version": "6.5.1"
+    },
+    "tagline": "You Know, for Search"
+}
+```
 * 有可能碰到的错误
 	
 	错误1
@@ -116,25 +116,25 @@ description:
  			http://10.13.132.205:9200/_cluster/health
  		
  		正常回复节点状态如下：
- 			
-			{
-			    "cluster_name": "suli-elasticsearch",
-			    "status": "green",
-			    "timed_out": false,
-			    "number_of_nodes": 3,
-			    "number_of_data_nodes": 3,
-			    "active_primary_shards": 5,
-			    "active_shards": 10,
-			    "relocating_shards": 0,
-			    "initializing_shards": 0,
-			    "unassigned_shards": 0,
-			    "delayed_unassigned_shards": 0,
-			    "number_of_pending_tasks": 0,
-			    "number_of_in_flight_fetch": 0,
-			    "task_max_waiting_in_queue_millis": 0,
-			    "active_shards_percent_as_number": 100
-			}
-			
+```json
+{
+    "cluster_name": "suli-elasticsearch",
+    "status": "green",
+    "timed_out": false,
+    "number_of_nodes": 3,
+    "number_of_data_nodes": 3,
+    "active_primary_shards": 5,
+    "active_shards": 10,
+    "relocating_shards": 0,
+    "initializing_shards": 0,
+    "unassigned_shards": 0,
+    "delayed_unassigned_shards": 0,
+    "number_of_pending_tasks": 0,
+    "number_of_in_flight_fetch": 0,
+    "task_max_waiting_in_queue_millis": 0,
+    "active_shards_percent_as_number": 100
+}
+```
  	可以看到当集群有三个节点，至此集群的简单部署已经完成了。
 	
 	
