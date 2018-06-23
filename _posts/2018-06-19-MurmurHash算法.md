@@ -4,11 +4,19 @@ title: MurmurHash算法
 date: 2018-06-19 15:14:54
 category: 算法
 tags: 算法 Hash MurmurHash 哈希
+author: suli
 ---
 * content
 {:toc}
 
 哈希算法在很多系统中有应用，除了在hashmap等数据结构中用外在负载均衡上也有应用，hash算法的性能直接影响很多底层应用，最近在看leveldb源码看到里面用到的hash算法，具体记录一下。
+
+
+
+
+
+
+
 
 ## MurmurHash算法介绍
 

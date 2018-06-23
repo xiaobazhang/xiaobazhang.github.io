@@ -4,6 +4,7 @@ title: ElasticSearch（一）集群安装
 category: ElasticSearch
 tags: ElasticSearch java 搜索
 date: 2017-07-05
+author: suli
 ---
 
 * content
@@ -18,7 +19,14 @@ date: 2017-07-05
  
   		tar -xvf elasticsearch-5.4.3.tar.gz 
   		cd elasticsearch-5.4.3
-  		
+
+
+
+
+
+
+
+
 * 单节点运行
 		
 		./bin/elasticsearch
