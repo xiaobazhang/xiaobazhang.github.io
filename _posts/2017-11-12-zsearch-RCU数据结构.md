@@ -130,13 +130,13 @@ FastBit是一种位图压缩算法，其中有一个核心的bitmap压缩算法W
 WAH算法的压缩原理是将数据流分为literal_word和fill_word两种，分别对不同的数据进行处理，对连续出现的bit机型压缩。
 - WAH算法的word位长为32位4个字节，其中word分为两种word，literal_word和fill_word两种，其中literal_word是专门存放正常0和1交叉出现的区间字段，而fill_word则是存放连续的0或者1，如下图所示：
     
-![WHA算法word](/public/img/tech/WHA_Word.png)
+![WHA算法word](http://p06g9mpb2.bkt.clouddn.com/18-6-23/86507674.jpg)
 
 其中literal_word的最高为是0，代表着该word是一个常规的word存放的是正常数据，而fillword的最高位是1，另外次高位如果为0那么说明该word后面全是为0的word，如果为1则后面word是全是为1的word。fillword剩下30位存放的是有多少个fillword块，所以fillword能表示最大2^30个连续的fillword个数。
 
 下面是对5456bit的二进制流进行压缩的流程：
 
-![WHA压缩过程](/public/img/tech/WAH_Process.png)
+![WHA压缩过程](http://p06g9mpb2.bkt.clouddn.com/18-6-23/83194907.jpg)
 
 可以看到这个5456bit位压缩完只需要三个字节，这种情况下很是和倒排链很稀疏的场景，压缩了会很高很高。WHA算法还有另外一个很好地性质，就是在进行逻辑运算的时候不需要解压就可以进行运算。比如对于literalword进行AND运算由于，第一位都一样不受影响，后面31位都是真实的数据AND操作不受影响。而对于fillword的AND运算假设：
 
@@ -156,7 +156,7 @@ Concise算法是WHA算法一种改进，压缩率会更高，Concise算法和WHA
 
 fillword具体结构如下图所示：
 
-![Concise算法](/public/img/tech/Concise.png)
+![Concise算法](http://p06g9mpb2.bkt.clouddn.com/18-6-23/29064312.jpg)
 
 该算法对于逻辑运算是不友好的，需要解压才能进行逻辑运算，这个比较劣势。
 
@@ -168,11 +168,11 @@ fillword具体结构如下图所示：
 - 然后再用<商数,余数>来表示每一组ID。此时会发现把所有的数据都固定到了固定长度为65535的chunk块内了。
 - 此时我们对于每个chunk的数据进行统计，如果块内数据小于4096那就用数组来存储这些数据，如果大于4096的大数据块我们就用bitset来存储。明显能看出来该算法在储存数据时是从分考虑了数据的稀疏和稠密的状态的。
 
-![roaring bitmap](/public/img/tech/Roaringbitmaps.png)
+![roaring bitmap](http://p06g9mpb2.bkt.clouddn.com/18-6-23/28189627.jpg)
 
 首先对于roaring bitmap算法中为什么用65535和4096这个数值来作为临界点，其实是有依据的，其中65535是两个字节表示的最大数字，并且刚好一个short可以搞定。如果选择4个字节整型该数值十几亿太大，如果选用三个字节又会出现字节浪费。所以选用65535这个数字，65535/8=8192字节该长度是恒定的，而在用array存数据时使用的是2个字节的short，因为要表示4096用char类型还不行，没办法用两个字节浪费了一点内存。此时表示array的2个字节，2*4096刚好是和用bitset表示的大块的字节数一致的，所以选取了4096这个特殊的数字。下面的图就能说明一切：
 
-![memory](/public/img/tech/block-memory.png)
+![memory](http://p06g9mpb2.bkt.clouddn.com/18-6-23/43591486.jpg)
 
 Roaring_bitmap查找和删除操作也很方便，可以说非常方便，所以在Lucene5.0后就使用了roaringbitmap作为倒排的基础数据结构。
 

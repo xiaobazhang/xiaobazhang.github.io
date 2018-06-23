@@ -28,8 +28,8 @@ description:
 
 X86-64下linux进程的地址结构如下图所示：
 
-![image](/public/img/tech/stack1.jpg) 
-![image](/public/img/tech/stack.png)
+![image](http://p06g9mpb2.bkt.clouddn.com/18-6-23/7254742.jpg)
+![image](http://p06g9mpb2.bkt.clouddn.com/18-6-23/94063377.jpg)
 
 左边的图很详细介绍了进程地址空间的具体排列。右边的图是用户空间详细的地址分配细节。
 
@@ -64,7 +64,7 @@ BSS段 | 未初始化或初值为0的全局变量和静态局部变量
     
     其实这两中情况透露了一个事实，内核已经在内存和磁盘之间的搭起了通道桥梁，本来就是通的，很容易开放给用户自己来实现内存的映射。具体的内存映射实现可以参考《深入理解计算机系统（原书第三版3》或者这篇文章[Linux进程间通信--内存映射](http://blog.csdn.net/yusiguyuan/article/details/45155003)
     
-    ![image](/public/img/tech/share.png)    
+    ![image](http://p06g9mpb2.bkt.clouddn.com/18-6-23/91979543.jpg)
 
     对象的共享技术很自然的就用到了动态链接库上了，其实程序运行有好多函数基础库都是要复用的比如说：printf，要是每个程序都有一个printf函数的拷贝，那系统绝对要炸锅，在虚拟的地址空间里设置内存映射段，可以直接把动态库链接到这个区域，具体加载器是如何将动态链接库映射到内存中的具体详细实现细节请参考（深入理解计算机系统（原书第三版3 580-586。
     
