@@ -17,7 +17,7 @@ description:
   MurmurHash 是一种非加密型哈希函数，适用于一般的哈希检索操作。由Austin Appleby [github地址](https://github.com/aappleby) 在2008年发明，并出现了多个变种，都已经发布到了公有领域。与其它流行的哈希函数相比，对于规律性较强的key，MurmurHash的随机分布特征表现更良好，现在在libstdc++，hadoop和nginx等很多著名开源项目中使用。
 MurmurHash3的实现，[代码](https://github.com/aappleby/smhasher/blob/master/src/MurmurHash3.cpp)
 
-```c
+```c++
 void MurmurHash3_x64_128 ( const void * key, const int len,
                            const uint32_t seed, void * out )
 {
@@ -99,7 +99,7 @@ void MurmurHash3_x64_128 ( const void * key, const int len,
 ``` 
 ## leveldb实现
 
-```c
+```c++
 uint32_t Hash(const char* data, size_t n, uint32_t seed) {
   // Similar to murmur hash
   const uint32_t m = 0xc6a4a793;
