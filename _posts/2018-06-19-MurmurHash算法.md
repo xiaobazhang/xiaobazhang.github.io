@@ -1,18 +1,23 @@
 ---
 layout: post
 title: MurmurHash算法
-category: 技术
-tags: 算法
+date: 2018-06-19 15:14:54
+category: 算法
+tags: 算法 Hash MurmurHash 哈希
 keywords: 
 description: 
 ---
+* content
+{:toc}
 
 哈希算法在很多系统中有应用，除了在hashmap等数据结构中用外在负载均衡上也有应用，hash算法的性能直接影响很多底层应用，最近在看leveldb源码看到里面用到的hash算法，具体记录一下。
 
 ## MurmurHash算法介绍
+
   MurmurHash 是一种非加密型哈希函数，适用于一般的哈希检索操作。由Austin Appleby [github地址](https://github.com/aappleby) 在2008年发明，并出现了多个变种，都已经发布到了公有领域。与其它流行的哈希函数相比，对于规律性较强的key，MurmurHash的随机分布特征表现更良好，现在在libstdc++，hadoop和nginx等很多著名开源项目中使用。
- MurmurHash3的实现，[代码](https://github.com/aappleby/smhasher/blob/master/src/MurmurHash3.cpp)
-```
+MurmurHash3的实现，[代码](https://github.com/aappleby/smhasher/blob/master/src/MurmurHash3.cpp)
+
+```C++
 void MurmurHash3_x64_128 ( const void * key, const int len,
                            const uint32_t seed, void * out )
 {
@@ -94,7 +99,7 @@ void MurmurHash3_x64_128 ( const void * key, const int len,
 ``` 
 ## leveldb实现
 
-```
+```C++
 uint32_t Hash(const char* data, size_t n, uint32_t seed) {
   // Similar to murmur hash
   const uint32_t m = 0xc6a4a793;
