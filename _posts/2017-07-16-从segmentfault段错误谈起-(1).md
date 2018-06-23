@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 从segmentfault段错误谈起-(1)
-category: 技术
+category: C++
 tags: Linux C++ 内核
 date: 2017-07-16
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: OSG三维渲染引擎--学习ref_ptr智能指针原理和设计
 date: 2016-07-11
-category: 技术
+category: 渲染引擎
 tags: OSG 渲染引擎 OpenGL
 ---
 

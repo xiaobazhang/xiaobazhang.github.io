@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OSG三维渲染引擎--OSG渲染引擎中坐标系
-category: 技术
+category: 渲染引擎
 tags: OSG 渲染引擎 OpenGL
 date: 2016-07-31
 ---

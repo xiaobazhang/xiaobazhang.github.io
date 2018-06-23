@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ElasticSearch（一）集群安装
-category: 技术
+category: ElasticSearch
 tags: ElasticSearch java 搜索
 date: 2017-07-05
 ---

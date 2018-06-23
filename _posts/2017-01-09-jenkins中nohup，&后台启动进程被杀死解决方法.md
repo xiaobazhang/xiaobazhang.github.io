@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jenkins解决后台启动自动被杀死方法
-category: 技术
+category: jekins
 tags: jenkins java
 date: 2017-01-09
 ---
