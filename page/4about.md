@@ -11,7 +11,7 @@ type: page
 
 ## 关于我
 
-<iframe src="http://p06g9mpb2.bkt.clouddn.com/18-6-23/90987805.jpg" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+<iframe src="http://p06g9mpb2.bkt.clouddn.com/18-6-23/90987805.jpg" style="border: 0;overflow: hidden;" frameBorder="0"></iframe>
 
 曾经就职于蘑菇街广告搜索部门，现在在蚂蚁金服微贷事业部。
 
