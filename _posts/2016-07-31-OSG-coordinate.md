@@ -24,13 +24,13 @@ description:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;摄像机坐标系对观察者的观看至关重要，摄像机坐标系和屏幕的坐标系相似，差别在于摄像机坐标系是3D的坐标系,屏幕坐标系是2D的坐标系.摄像机坐标是一种特殊的坐标系,该物体坐标系定义在摄像机的屏幕可视区域.摄像机坐标系管理者那些物体需要进行渲染,并且在屏幕上进行显示,其中主要解决的问题包括物体可是区域渲染,物体的遮挡显示等.因此摄像机坐标系的描述问题是非常复杂的.
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OSG中采用的坐标系是左手坐标系,和OpenGL所使用的坐标系是相同的,但是他们的坐标轴不一样.左手坐标系如下图所示:
 
-![1](/public/img/tech/left_coordinate.jpg)
+![1](http://p06g9mpb2.bkt.clouddn.com/18-6-23/23495166.jpg)
 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OSG中采用的X轴正方向向右，Y轴正方向朝里，Z轴正方向向上。
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OSG中采用的X轴正方向向右，Y轴正方向朝上，Z轴正方向朝外。
 两个坐标轴如下图所示:
 
-![2](/public/img/tech/OSG_OpenGL.jpg)
+![2](http://p06g9mpb2.bkt.clouddn.com/18-6-23/5038333.jpg)
 
 
 ## 1.2 坐标系变换
@@ -44,7 +44,7 @@ description:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;物体坐标系转世界坐标系是有一定的难度的。对于场景中图形中的某一个Node节点，他和场景的根节点是存在一些变换节点的，如果要变换到根节点的世界坐标系，那么我们需要得到场景中根节点到场景中某个节点的所有变换节点。OSG的场景系统中提供了场景节点和其父节点的变换矩阵。这些变换矩阵中包括了相对的坐标。那么计算世界坐标系只需要对根节点和场景节点之间的所有变换矩阵相乘即可。
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OSG中提供了对于节点的访问机制。可以通过回调或者访问器来实现。其中OSG回调方式没有可操作性，并且会增加额外的计算开销。所以更多的是使用节点访问器来实现计算世界坐标系。OSG中节点访问器通过获得路经上的转换坐标进行连乘。具体步骤如下图所示:
 
-![3](/public/img/tech/node_accept.jpg)
+![3](http://p06g9mpb2.bkt.clouddn.com/18-6-23/26760978.jpg)
 
 ### 3.世界坐标系转换屏幕坐标系
 
