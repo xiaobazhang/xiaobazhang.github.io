@@ -212,7 +212,7 @@ description_footer: 本站记录我前端之旅的沿途风景！
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
 duoshuo_shortname: #hygblog
-disqus_shortname: gaohaoyang
+disqus_shortname: xiaobazhang
 ```
 
 运行成功后，可以在 disqus 或 多说 的后台管理页看到相关信息。

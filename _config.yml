@@ -11,7 +11,7 @@ brief-intro: 搜索开发工程师
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://xiaobazhang.github.io/" # the base hostname & protocol for your site
 
-permalink: /:year/:month/:day/:title/
+permalink: /:year/:month/:day/:id/
 
 # other links
 #twitter_username: gaohaoyang126
