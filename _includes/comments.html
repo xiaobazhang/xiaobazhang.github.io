@@ -40,18 +40,18 @@
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript-->
-<div id="container"></div>
+<div id="gitmentContainer"></div>
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
-var gitment = new Gitment({
-  owner: 'xiaobazhang',
-  repo: 'https://github.com/xiaobazhang/talk.git',
-  oauth: {
-    client_id: '409df59e0270fe369a2b',
-    client_secret: '194664a4a40fa1247ff800b6d19f4d1ae8f17141',
-  },
-})
-gitment.render('container')
+    var gitment = new Gitment({
+        owner: 'xiaobazhang',
+        repo: 'https://github.com/xiaobazhang/talk.git',
+        oauth: {
+            client_id: '409df59e0270fe369a2b',
+            client_secret: '194664a4a40fa1247ff800b6d19f4d1ae8f17141',
+        },
+    });
+    gitment.render('gitmentContainer');
 </script>
 {% endif %}
