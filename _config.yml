@@ -28,8 +28,16 @@ description_footer: 记录自己所有的成长
 # comments
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: #hygblog
-disqus_shortname: xiaobazhang
+#duoshuo_shortname: #hygblog
+#disqus_shortname: xiaobazhang
+
+gitment:
+  enable: true
+  githubID: xiaobazhang
+  repo: xiaobazhang.github.io
+  ClientID: 409df59e0270fe369a2b
+  ClientSecret: 194664a4a40fa1247ff800b6d19f4d1ae8f17141
+  lazy: false
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
