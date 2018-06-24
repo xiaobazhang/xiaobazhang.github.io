@@ -20,7 +20,7 @@
 {% endif %}
 
 {% if site.disqus_shortname %}
-<div id="disqus_thread"></div>
+<!--div id="disqus_thread"></div>
 <script>
 
     /**
@@ -39,5 +39,20 @@
         (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript-->
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '12716479', // 可选。默认为 location.href
+  owner: 'xiaobazhang',
+  repo: 'https://github.com/xiaobazhang/talk.git',
+  oauth: {
+    client_id: '409df59e0270fe369a2b',
+    client_secret: '194664a4a40fa1247ff800b6d19f4d1ae8f17141',
+  },
+})
+gitment.render('container')
+</script>
 {% endif %}
