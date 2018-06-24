@@ -34,7 +34,7 @@ description_footer: 记录自己所有的成长
 gitment:
   enable: true
   githubID: xiaobazhang
-  repo: xiaobazhang.github.io
+  repo: talk
   ClientID: 409df59e0270fe369a2b
   ClientSecret: 194664a4a40fa1247ff800b6d19f4d1ae8f17141
   lazy: false
