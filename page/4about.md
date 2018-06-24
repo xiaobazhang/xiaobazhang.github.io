@@ -38,6 +38,15 @@ type: page
 ## 友情链接
 
 * [偶像云风博客](https://blog.codingnow.com)
+* [刘未鹏](http://mindhacks.cn/)
+* [Jeff Preshing](http://preshing.com/) 加拿大C++大牛
+* [Herb Sutter's Blog](https://herbsutter.com/)
+* [Andrzej's C++ blog](https://akrzemi1.wordpress.com/)
+* [Bjarne Stroustrup](http://www.stroustrup.com/)
+* [Scott Meyers](http://scottmeyers.blogspot.com/)
+* [Anthony Williams](https://www.justsoftwaresolutions.co.uk/blog/)
+* [Andrzej Krzemieński](https://akrzemi1.wordpress.com/) 波兰大牛
+* [陈硕](https://blog.csdn.net/solstice/)
 * [李乾坤博客](https://qiankunli.github.io)
 
 ## Comments
