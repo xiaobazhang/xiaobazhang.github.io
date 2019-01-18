@@ -11,7 +11,7 @@ type: page
 
 ## 关于我
 
-![](http://p06g9mpb2.bkt.clouddn.com/18-6-23/90987805.jpg)
+![](https://blog-1256080294.cos.ap-shanghai.myqcloud.com/90987805.jpg)
 
 曾经就职于蘑菇街广告搜索部门，现在在蚂蚁金服微贷事业部。
 
