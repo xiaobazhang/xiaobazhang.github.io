@@ -13,7 +13,7 @@ type: page
 
 ![](https://blog-1256080294.cos.ap-shanghai.myqcloud.com/90987805.jpg)
 
-曾经就职于蘑菇街广告搜索部门，现在在蚂蚁金服微贷事业部。
+曾经就职于蘑菇街广告搜索部门，后在蚂蚁金服微贷事业部，现在网易云音乐负责搜索开发。
 
 主要兴趣集中在C和C++开发，搜索技术开发，平时也喜欢捯饬一下硬件，喜欢飞机，哈哈不是打飞机。
 
@@ -48,6 +48,9 @@ type: page
 * [Andrzej Krzemieński](https://akrzemi1.wordpress.com/) 波兰大牛
 * [陈硕](https://blog.csdn.net/solstice/)
 * [李乾坤博客](https://qiankunli.github.io)
+* [NickYang](https://www.cppfans.org)
+
+
 
 ## Comments
 
