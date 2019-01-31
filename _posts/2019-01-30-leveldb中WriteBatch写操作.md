@@ -113,7 +113,7 @@ void WriteBatch::Put(const Slice& key, const Slice& value) {
 - 写入操作
 
 
-```
+```c++
 Status DBImpl::Write(const WriteOptions& options, WriteBatch* my_batch) {
 /*struct DBImpl::Writer {
 *  WriteBatch* batch;
