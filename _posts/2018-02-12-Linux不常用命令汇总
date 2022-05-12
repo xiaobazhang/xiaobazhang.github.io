@@ -1,0 +1,39 @@
+---
+layout: post
+title: Linux不常用命令汇总
+category: Linux
+tags: 工具集
+date: 2018-02-12
+author: suli
+---
+
+## Linux一些不常用命令
+
+### shuf命令
+
+专门用于随机排序一个文件，很简单很粗暴。
+
+```$xslt
+shuf --help
+Usage: shuf [OPTION]... [FILE]
+  or:  shuf -e [OPTION]... [ARG]...
+  or:  shuf -i LO-HI [OPTION]...
+Write a random permutation of the input lines to standard output.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -e, --echo                将每个参数视为输入行
+  -i, --input-range=LO-HI   将LO 到HI 的每个数字视为输入行
+  -n, --head-count=COUNT    最多输出指定的行数
+  -o, --output=FILE         将结果输出到指定文件而非标准输出
+      --random-source=FILE  get random bytes from FILE
+  -z, --zero-terminated     以0 结束行而非新行
+      --help     display this help and exit
+      --version  output version information and exit
+
+With no FILE, or when FILE is -, read standard input.
+```
+随机排序一个已排序的文件
+
+```$xslt
+shuf xxxx.txt -o rand.txt
+```
